@@ -2,3 +2,165 @@
 @tailwind components;
 @tailwind utilities;
 
+.card{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.blog-page{
+    min-height: calc(100vh - 9rem);
+    background-color: rgb(191, 219, 254);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.blog-page h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.red{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: redy 8s ease-in-out 1s infinite normal;
+}
+.green{
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    animation: greeny 8s ease-in-out 1s infinite normal;
+}
+.blue{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    animation: bluey 8s ease-in-out 1s infinite normal;
+}
+.yellow{
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    animation: yellowy 8s ease-in-out 1s infinite normal;
+}
+
+
+@keyframes redy {
+    0%{
+        top: 0vh;
+        left: 0vw;
+    }
+    25%{
+        top: 0vh;
+        left: calc(100vw - 100px);
+        background-color: green;
+    }
+    50%{
+        top: calc(100vh - 9rem - 100px);
+        left: calc(100vw - 100px);
+        background-color: yellow;
+    }
+    75%{
+        top: calc(100vh - 9rem - 100px);
+        left: 0vw;
+        background-color: blue;
+    }
+    100%{
+        top: 0vh;
+        left: 0vw;
+    }
+}
+@keyframes greeny {
+    0%{
+        top: 0vh;
+        right: 0vw;
+    }
+    25%{
+        top: calc(100vh - 9rem - 100px);
+        right: 0vw;
+        background-color: yellow;
+    }
+    50%{
+        top: calc(100vh - 9rem - 100px);
+        right: calc(100vw - 100px);
+        background-color: blue;
+    }
+    75%{
+        top: 0vh;
+        right: calc(100vw - 100px);
+        background-color: red;
+    }
+    100%{
+        top: 0vh;
+        right: 0vw;
+    }
+}
+@keyframes bluey {
+    0%{
+        bottom: 0vh;
+        left: 0vw;
+    }
+    25%{
+        bottom: calc(100vh - 9rem - 100px);
+        left: 0vw;
+        background-color: red;
+    }
+    50%{
+        bottom: calc(100vh - 9rem - 100px);
+        left: calc(100vw - 100px);
+        background-color: green;
+    }
+    75%{
+        bottom: 0vh;
+        left: calc(100vw - 100px);
+        background-color: yellow;
+    }
+    100%{
+        bottom: 0vh;
+        left: 0vw;
+    }
+}
+@keyframes yellowy {
+    0%{
+        top: calc(100vh - 9rem - 100px);
+        left: calc(100vw - 100px);
+    }
+    25%{
+        top: calc(100vh - 9rem - 100px);
+        left: 0vw;
+        background-color: blue;
+    }
+    50%{
+        top: 0vw;
+        left: 0vw;
+        background-color: red;
+    }
+    75%{
+        top: 0vw;
+        left: calc(100vw - 100px);
+        background-color: green;
+    }
+    100%{
+        top: calc(100vh - 9rem - 100px);
+        left: calc(100vw - 100px);
+    }
+}
